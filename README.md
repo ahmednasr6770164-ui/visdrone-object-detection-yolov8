@@ -47,5 +47,35 @@ The weights file may be provided separately if it is too large for a convenient 
 ## Limitations
 The model may miss objects, especially small or overlapping instances. The reported scores reflect evaluation on the provided test split and should not be interpreted as production-level performance.
 
+## How to Run
+
+### 1. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run Object Detection
+
+Place `VisDrone_YOLO_yolov8s.pt` in the project directory, then run:
+
+```bash
+python predict.py --image path/to/your/image.jpg
+```
+
+Replace `path/to/your/image.jpg` with the path to your image.
+
+The output image with bounding boxes will be saved in the `runs/detect/predict` directory (or a numbered variant if that directory already exists).
+
+## Project Structure
+
+```text
+visdrone-object-detection-yolov8/
+├── README.md
+├── predict.py
+├── requirements.txt
+└── VisDrone_YOLO_yolov8s.pt
+```
+
 ## Author
 Ahmed Nasr
